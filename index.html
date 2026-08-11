@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cédric Liobo Yalala | Transport aérien, PASET & IPAT</title>
+
+  <meta name="description"
+        content="Page scientifique de Cédric Liobo Yalala. Travaux sur le transport aérien, la connectivité aérienne, le développement territorial, la PASET et l'IPAT en République Démocratique du Congo.">
+
+  <meta name="author" content="Cédric Liobo Yalala">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical"
+        href="https://cedriclioboyalala-star.github.io/">
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --primary: #123a63;
+      --secondary: #1b6ca8;
+      --border: #e2e8f0;
+      --soft: #eef5fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background:
+        linear-gradient(135deg, rgba(7,28,51,.97), rgba(18,58,99,.95));
+      color: white;
+      padding: 75px 22px 65px;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .82rem;
+      opacity: .78;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      margin: 0 0 16px;
+    }
+
+    .subtitle {
+      max-width: 850px;
+      font-size: 1.15rem;
+      color: #d8e7f5;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.45);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-weight: 600;
+      font-size: .94rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 22px 70px;
+    }
+
+    section {
+      margin-bottom: 55px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .info-card strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .research-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: var(--soft);
+      border: 1px solid #d8e8f5;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: .9rem;
+    }
+
+    .publication {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 27px;
+      margin-bottom: 22px;
+      box-shadow: 0 7px 25px rgba(18,58,99,.05);
+    }
+
+    .publication .year {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .publication h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.32rem;
+      line-height: 1.4;
+      margin: 8px 0 8px;
+    }
+
+    .publication .author {
+      color: var(--muted);
+      margin-bottom: 13px;
+    }
+
+    .publication p {
+      margin-top: 8px;
+    }
+
+    .pub-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pub-btn {
+      padding: 8px 13px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: #fafcff;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .pub-btn:hover {
+      background: var(--soft);
+      text-decoration: none;
+    }
+
+    .framework {
+      background: linear-gradient(135deg, #eef5fb, #ffffff);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .flow {
+      font-weight: 700;
+      text-align: center;
+      color: var(--primary);
+      font-size: 1.05rem;
+      padding: 14px;
+    }
+
+    footer {
+      background: #0b2239;
+      color: #cbd5e1;
+      padding: 35px 22px;
+    }
+
+    footer .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    footer a {
+      color: #dcecff;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 50px;
+      }
+
+      .publication {
+        padding: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="eyebrow">Academic & Research Profile</div>
+
+    <h1>Cédric Liobo Yalala</h1>
+
+    <p class="subtitle">
+      Travaux de recherche sur le transport aérien, la connectivité,
+      l'accessibilité territoriale, l'économie régionale et les mécanismes
+      par lesquels le système aérien peut contribuer à la transformation
+      socio-économique des territoires.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-primary"
+         href="#publications">
+        Voir les publications
+      </a>
+
+      <a class="btn btn-outline"
+         href="https://orcid.org/0009-0008-1310-3400"
+         target="_blank"
+         rel="noopener">
+        ORCID
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#profil">Profil</a>
+    <a href="#recherche">Recherche</a>
+    <a href="#publications">Publications</a>
+    <a href="#paset">PASET / IPAT</a>
+    <a href="#identifiants">Identifiants</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="profil">
+    <h2>Profil scientifique</h2>
+
+    <p class="section-intro">
+      Cette page rassemble mes travaux scientifiques et publications
+      consacrés principalement au transport aérien et à ses relations
+      avec les dynamiques économiques, sociales et territoriales.
+    </p>
+
+    <div class="profile-grid">
+
+      <div class="info-card">
+        <strong>Auteur</strong>
+        Cédric Liobo Yalala
+      </div>
+
+      <div class="info-card">
+        <strong>Affiliation</strong>
+        Autorité de l'Aviation Civile de la République Démocratique
+        du Congo (AAC/RDC)
+      </div>
+
+      <div class="info-card">
+        <strong>ORCID</strong>
+        <a href="https://orcid.org/0009-0008-1310-3400"
+           target="_blank"
+           rel="noopener">
+          0009-0008-1310-3400
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="recherche">
+    <h2>Domaines de recherche</h2>
+
+    <p class="section-intro">
+      Les recherches développées portent notamment sur les relations
+      entre systèmes de transport aérien, accessibilité, structures
+      territoriales et développement.
+    </p>
+
+    <div class="research-tags">
+      <span class="tag">Transport aérien</span>
+      <span class="tag">Aviation civile</span>
+      <span class="tag">Connectivité aérienne</span>
+      <span class="tag">Accessibilité territoriale</span>
+      <span class="tag">Développement territorial</span>
+      <span class="tag">Économie régionale</span>
+      <span class="tag">Politiques publiques</span>
+      <span class="tag">PASET</span>
+      <span class="tag">IPAT</span>
+      <span class="tag">République Démocratique du Congo</span>
+    </div>
+  </section>
+
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <p class="section-intro">
+      Publications et prépublications consacrées à la théorie PASET,
+      à l'Indice de Portance Aérienne Territoriale (IPAT) et à leur
+      application au contexte territorial congolais.
+    </p>
+
+
+    <!-- ARTICLE 1 -->
+    <article class="publication">
+      <div class="year">2026 · Prépublication</div>
+
+      <h3>
+        De la connectivité aérienne à la portance territoriale :
+        fondements de la PASET et construction de l'IPAT
+      </h3>
+
+      <div class="author">
+        Cédric Liobo Yalala
+      </div>
+
+      <p>
+        Cet article développe les fondements théoriques de la
+        Portance Aérienne Socio-économique et Territoriale (PASET)
+        et présente la construction de l'Indice de Portance Aérienne
+        Territoriale (IPAT).
+      </p>
+
+      <p>
+        <strong>DOI :</strong>
+        <a href="https://doi.org/10.5281/zenodo.21860626"
+           target="_blank"
+           rel="noopener">
+          10.5281/zenodo.21860626
+        </a>
+      </p>
+
+      <div class="pub-actions">
+
+        <a class="pub-btn"
+           href="article1.html">
+          Page de l'article
+        </a>
+
+        <a class="pub-btn"
+           href="https://doi.org/10.5281/zenodo.21860626"
+           target="_blank"
+           rel="noopener">
+          Zenodo / DOI
+        </a>
+
+      </div>
+    </article>
+
+
+    <!-- ARTICLE 2 -->
+    <article class="publication">
+      <div class="year">2026 · Prépublication</div>
+
+      <h3>
+        La PASET à l'épreuve du territoire congolais :
+        portance aérienne, différenciation régionale et politiques
+        publiques en République Démocratique du Congo
+      </h3>
+
+      <div class="author">
+        Cédric Liobo Yalala
+      </div>
+
+      <p>
+        Cette étude applique le cadre PASET au territoire congolais
+        afin d'analyser la différenciation territoriale de la portance
+        aérienne et ses implications pour les politiques publiques.
+      </p>
+
+      <p>
+        <strong>DOI :</strong>
+        <a href="https://doi.org/10.5281/zenodo.21861419"
+           target="_blank"
+           rel="noopener">
+          10.5281/zenodo.21861419
+        </a>
+      </p>
+
+      <div class="pub-actions">
+
+        <a class="pub-btn"
+           href="article2.html">
+          Page de l'article
+        </a>
+
+        <a class="pub-btn"
+           href="https://doi.org/10.5281/zenodo.21861419"
+           target="_blank"
+           rel="noopener">
+          Zenodo / DOI
+        </a>
+
+      </div>
+    </article>
+
+  </section>
+
+
+  <section id="paset">
+    <h2>PASET & IPAT</h2>
+
+    <div class="framework">
+
+      <p>
+        La <strong>Portance Aérienne Socio-économique et Territoriale
+        (PASET)</strong> constitue le cadre théorique développé pour
+        analyser la capacité d'un système aérien à produire et à
+        diffuser des effets économiques, sociaux et territoriaux.
+      </p>
+
+      <div class="flow">
+        Infrastructure → Connectivité → Accessibilité →
+        Activation → Portance → Transformation territoriale
+      </div>
+
+      <p>
+        L'<strong>Indice de Portance Aérienne Territoriale
+        (IPAT)</strong> constitue l'instrument de mesure associé
+        au cadre PASET.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section id="identifiants">
+    <h2>Identifiants scientifiques</h2>
+
+    <div class="profile-grid">
+
+      <div class="info-card">
+        <strong>ORCID</strong>
+        <a href="https://orcid.org/0009-0008-1310-3400"
+           target="_blank"
+           rel="noopener">
+          0009-0008-1310-3400
+        </a>
+      </div>
+
+      <div class="info-card">
+        <strong>Zenodo — Article 1</strong>
+        <a href="https://doi.org/10.5281/zenodo.21860626"
+           target="_blank"
+           rel="noopener">
+          DOI 10.5281/zenodo.21860626
+        </a>
+      </div>
+
+      <div class="info-card">
+        <strong>Zenodo — Article 2</strong>
+        <a href="https://doi.org/10.5281/zenodo.21861419"
+           target="_blank"
+           rel="noopener">
+          DOI 10.5281/zenodo.21861419
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="footer-inner">
+
+    <strong>Cédric Liobo Yalala</strong><br>
+
+    Autorité de l'Aviation Civile de la République Démocratique
+    du Congo (AAC/RDC)<br><br>
+
+    ORCID :
+    <a href="https://orcid.org/0009-0008-1310-3400"
+       target="_blank"
+       rel="noopener">
+      0009-0008-1310-3400
+    </a>
+
+    <br>
+
+    Article 1 :
+    <a href="https://doi.org/10.5281/zenodo.21860626"
+       target="_blank"
+       rel="noopener">
+      10.5281/zenodo.21860626
+    </a>
+
+    <br>
+
+    Article 2 :
+    <a href="https://doi.org/10.5281/zenodo.21861419"
+       target="_blank"
+       rel="noopener">
+      10.5281/zenodo.21861419
+    </a>
+
+    <p>
+      © 2026 Cédric Liobo Yalala
+    </p>
+
+  </div>
+</footer>
+
+</body>
+</html>
